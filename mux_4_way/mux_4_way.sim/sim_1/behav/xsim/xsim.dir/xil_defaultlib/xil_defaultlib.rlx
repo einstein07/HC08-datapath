@@ -2,6 +2,7 @@
 2019.2
 Nov  6 2019
 21:42:20
-/home/root07/Desktop/Final year/VAC Work/Project/mux_4_way/mux_4_way.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
-/home/root07/Desktop/Final year/VAC Work/Project/mux_4_way/mux_4_way.srcs/sim_1/new/sim_mux.v,1580289487,verilog,,,,sim_mux,,,,,,,,
-/home/root07/Desktop/Final year/VAC Work/Project/mux_4_way/mux_4_way.srcs/sources_1/new/mux.v,1580289056,verilog,,/home/root07/Desktop/Final year/VAC Work/Project/mux_4_way/mux_4_way.srcs/sim_1/new/sim_mux.v,,mux,,,,,,,,
+/home/root07/Desktop/Final year/VAC Work/HC08 datapath/mux_4_way/mux_4_way.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
+/home/root07/Desktop/Final year/VAC Work/HC08 datapath/mux_4_way/mux_4_way.srcs/sim_1/new/mux_tb.v,1580655060,verilog,,,,mux_tb,,,,,,,,
+/home/root07/Desktop/Final year/VAC Work/HC08 datapath/mux_4_way/mux_4_way.srcs/sim_1/new/sim_mux.v,1580289487,verilog,,,,sim_mux,,,,,,,,
+/home/root07/Desktop/Final year/VAC Work/HC08 datapath/mux_4_way/mux_4_way.srcs/sources_1/new/mux.v,1580650772,verilog,,/home/root07/Desktop/Final year/VAC Work/HC08 datapath/mux_4_way/mux_4_way.srcs/sim_1/new/mux_tb.v,,mux,,,,,,,,

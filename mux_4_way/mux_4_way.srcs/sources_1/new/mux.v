@@ -19,8 +19,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module mux (
-input [7:0] a,b,c,d,//input
+module mux (input [7:0] a,b,c,d,//input
 input [1:0] sel,//2-bit select
 output [7:0]  y// output
 );
@@ -32,7 +31,7 @@ always @ (*)
           1: Y=b;
           2: Y=c;
           3: Y=d;
-          default:;
+          default:Y = 8'bx;
         endcase
     end
 assign y = Y;
