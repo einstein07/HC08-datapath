@@ -28,7 +28,6 @@ module top(
     input alu_in_sel,
     input [1:0] mux2_sel,
     input [4:0] opcode,
-    input [7:0] prev_alu_out,
     input [7:0] mem_data,
     input [7:0] cu_data,
     output [2:0] status_bits,
@@ -54,16 +53,21 @@ module top(
     //Input multiplexers
     //------------------------------------------------------------------------------
     mux_2_way input_mux1(cu_data, mem_data, mux1_sel, in_mux1_out);
-    mux_4_way input_mux2(prev_alu_out, cu_data, mem_data, ZERO, mux2_sel, mux2_sel, in_mux2_out);
+    mux_4_way input_mux2(alu_out, cu_data, mem_data, ZERO, mux2_sel, in_mux2_out);
     //------------------------------------------------------------------------------
     //Accumulator
     //------------------------------------------------------------------------------
-    accumulator acc(.clk(clk),.acc_load(acc_load), .d(mux2_out), .q(acc_out));
+    accumulator acc(.clk(clk),.acc_load(acc_load), .d(in_mux2_out), .q(acc_out));
     
     mux_2_way alu_mux1(.a(acc_out), .b(in_mux1_out), .sel(alu_in_sel), .y(alu_mux1_out));
     mux_2_way alu_mux2(.a(in_mux1_out), .b(acc_out), .sel(alu_in_sel), .y(alu_mux2_out));
     
-    alu alu1(.operand1(alu_mux1_out), .operand2(alu_mux2_out), .opCode(opcode), .out(alu_out), .flags(flags));
+    alu alu1(.operand1(alu_mux1_out), .operand2(alu_mux2_out), .opcode(opcode), .out(alu_out), .flags(flags));
     
     status_bit_reg str(.clk(clk), .reset(reset), .d(flags), .q(status_bits));
+    
+    
+    //mux_4_way input_mux2_wb(alu_out, cu_data, mem_data, ZERO, ZERO, in_mux2_out);
+    //accumulator acc_wb(.clk(clk),.acc_load(acc_load), .d(in_mux2_out), .q(acc_out));
+
 endmodule

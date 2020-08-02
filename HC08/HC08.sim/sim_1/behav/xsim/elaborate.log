@@ -1,0 +1,21 @@
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /home/root07/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab -wto 451a0d674daf48acb8449965c6b81233 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot HC08_tb_behav xil_defaultlib.HC08_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 8 for port 'd' [/home/root07/Desktop/Final year/VAC Work/Datapath/HC08 datapath/HC08/HC08.srcs/sources_1/new/top.v:56]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 8 for port 'd' [/home/root07/Desktop/Final year/VAC Work/Datapath/HC08 datapath/HC08/HC08.srcs/sim_1/new/HC08_tb.v:40]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mux_2_way
+Compiling module xil_defaultlib.mux_4_way
+Compiling module xil_defaultlib.accumulator
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.status_bit_reg
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.HC08_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot HC08_tb_behav

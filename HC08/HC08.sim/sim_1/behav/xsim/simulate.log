@@ -1,0 +1,18 @@
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+Clock	Reset	Accumulator
+0	x	  x
+1	1	  x
+0	0	  x
+1	0	  x
+0	0	  x
+1	0	  x
+0	0	  x
+1	0	 20
+0	0	 20
+1	0	 20
+0	0	 20
+1	0	 22
+0	0	 22
+1	0	 22
+0	0	 22

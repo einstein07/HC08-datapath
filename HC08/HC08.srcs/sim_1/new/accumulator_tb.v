@@ -3,9 +3,9 @@
 // Company: UCT
 // Engineer: Sindiso Mkhatshwa
 // 
-// Create Date: 24.07.2020 00:06:35
+// Create Date: 24.07.2020 00:12:12
 // Design Name: 
-// Module Name: accumulator
+// Module Name: accumulator_tb
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -19,17 +19,15 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module accumulator(
-    input clk,
-    input acc_load,
-    input [7:0] d,
-    output [7:0] q
-    );
-    //internal registers
-    reg [7:0] temp;
-    always @(posedge clk)
-        begin
-            if(acc_load)temp <= d;
+module accumulator_tb;
+    reg clk;
+    reg [7:0] in;
+    wire [7:0] out;
+    
+    acc myAcc(.clk(clk));
+        initial begin
+            clk = 1;
+            in = 8'b01;
         end
-    assign q = temp;
+    always #10 clk =~clk;
 endmodule

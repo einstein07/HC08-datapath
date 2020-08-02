@@ -21,12 +21,13 @@
 
 
 module status_bit_reg(
-    input reset,clk,
+    input clk,
+    input reset,
     input [2:0] d,
-    output [2:0] q,
-    reg [2:0] Q
+    output [2:0] q
     );
-    
+    //internal register
+    reg [2:0] Q;
     always @(posedge clk)begin
         if(reset)
             Q = 1'b0;
